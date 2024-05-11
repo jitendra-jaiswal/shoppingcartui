@@ -1,0 +1,44 @@
+
+<div>
+    <span class="heading-title">Checkout:</span>
+    <button class="navigate-button" (click)="gotoproducts()">Add More Products</button>
+</div>
+
+<div class="cart-container">
+    <div class="leftchild">
+        <ng-container *ngFor="let item of cartitems">
+            <div class="cartitem">
+                <div> Name: {{item.productCode}} 
+                    <span class="special">{{item.specialMessage}}</span>
+                </div>
+                <div class="inline-div">
+                    <span class="just-margin">Unit Price: {{item.unitPrice | currency:'INR'}}</span> 
+                    <span class="just-margin">Quantity: {{item.quantity}}</span>
+                    
+                </div>
+                <div class="inline-div">
+                    <span class="just-margin">Discount: {{item.discount | currency:'INR'}}</span>
+                    <span class="just-margin">Discount Code: {{item.discountCode}}</span>
+                </div>
+                <div class="inline-div">
+                    <span class="just-margin">Total Amount Before Discount: {{item.totalAmountBeforeDiscount | currency:'INR'}}</span>
+                    <span class="just-margin">Amount After Discount: {{item.totalAmountBeforeDiscount - item.discount  | currency:'INR'}}</span>
+                    <button class="remove-button" (click)="remove(item)">Remove</button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    
+    <div class="separator"></div>
+    
+    <div class="rightchild">
+        <div class="cartitem">
+            <h3>Summary:</h3>
+            <p>Total Amount: {{cart.totalAmount | currency:'INR'}}</p>
+            <p>Total Discount: {{cart.totalDiscount | currency:'INR'}}</p>
+            <p>Amount Payable: {{cart.totalNetAmount | currency:'INR'}}</p>
+        </div>
+    </div>
+
+</div>
+

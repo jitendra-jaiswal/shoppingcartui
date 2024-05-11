@@ -1,0 +1,10 @@
+<div>
+    <span class="heading-title">Products:</span>
+    <button class="navigate-button" (click)="gotocart()">Go To Cart</button>
+</div>
+
+<div class="products-container">
+    <ng-container *ngFor="let product of products">
+        <app-productdetail [productitem]="product" (onClick)="addToCart($event)"></app-productdetail>
+    </ng-container>
+</div>

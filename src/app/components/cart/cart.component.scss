@@ -1,0 +1,97 @@
+:host {
+    display: block;
+    width: 100%;
+    padding: 20px;
+}
+
+.cart-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .leftchild {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: 20px;
+
+        .special {
+            text-decoration: solid;
+            color: red;
+            font-size: medium;
+            float: inline-end;
+            font-style: italic;
+            font-family: cursive;
+        }
+
+        .inline-div {
+            display: flex;
+            width: 100%;
+
+            .just-margin {
+                margin-right: auto;
+                width: 50%;
+            }
+        }
+    }
+
+    .separator {
+        width: 1%;
+        border-left: solid 1px
+    }
+
+    .rightchild {
+        width: 25%;
+        margin: 20px;
+    }
+}
+
+.cartitem {
+    border-bottom: 1px solid black;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 1.0);
+    width: 100%;
+}
+
+.heading-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navigate-button {
+    background-color: #319127;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 50px;
+    width: 150px;
+    float: inline-end;
+    cursor: pointer;
+
+    &:hover {
+        background-color: gray;
+    }
+}
+
+
+.remove-button {
+    background-color: #319127;
+    color: white;
+    border: none;
+    padding: 0px 00px;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 100px;
+    float: inline-end;
+    cursor: pointer;
+    height: 30px;
+
+    &:hover {
+        background-color: gray;
+    }
+}

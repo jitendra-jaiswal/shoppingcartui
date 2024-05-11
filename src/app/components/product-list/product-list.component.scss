@@ -1,0 +1,34 @@
+:host {
+    display: block;
+    width: 100%;
+    padding: 20px;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.heading-title {
+    font-size:2em;
+    font-weight: bold;
+}
+
+.navigate-button{
+    background-color: #319127;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 50px;
+    width: 150px;
+    float: inline-end;
+    cursor: pointer;
+
+    &:hover{
+        background-color: gray;
+    }
+
+}
