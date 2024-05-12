@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { cartItem, cartmodel } from '../models/cartmodel';
 import { Router } from '@angular/router';
-import { CurrencyPipe, NgFor } from '@angular/common';
+import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [NgFor,CurrencyPipe],
+  imports: [NgFor,CurrencyPipe, NgIf],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
