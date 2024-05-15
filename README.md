@@ -24,4 +24,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
+1. Angular UI implemented to interact with WebAPIs. 
+	a. SubComponent compartmentalization used to ensure reusability of components such as productdetail component as a child component for product list passing each product as input to child component.
+	b. Feature developed 
+		- /Product - Page interacting with products and webapi, fetching products, parsing response and displaying products with details to enable customers to add to cart and quantity.
+		- /cart - Page interacting with cart api to fetch list of items added in cart, show the unit proice, disocunt, discount code used and special message if any along with summary of entire cart with totalamount, totaldiscount and net amount.
+		- Cart Service - service injected in root added to enable webapi interaction from different components.
+		- Router - Router based application navigation added injected in root to support product and cart navigation.
+		- Flex based wrapping added to support minimal responsiveness.(Bootstrap based complete responsiveness pending implementation)
+
+2. Run shopping cart api and generate jwt token to replace in the cart.service.ts app to run it locally
+    
+
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
